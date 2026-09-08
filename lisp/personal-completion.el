@@ -1,5 +1,9 @@
 ;;; personal-completion.el --- Completion and minibuffer workflow -*- lexical-binding: t; no-byte-compile: t; -*-
 
+;;; Commentary:
+;;
+;; This module defines the interactive completion and navigation layer.
+;;
 ;; Scope:
 ;; - in-buffer completion and minibuffer navigation
 ;; - command discovery and search
@@ -8,6 +12,15 @@
 ;;
 ;; This module is intentionally focused on the interactive, "discoverability"
 ;; layer of Emacs. Keep it opinionated and compact.
+;;
+;; Corfu handles in-buffer completion popups; Vertico, Orderless, Marginalia,
+;; Embark, and Consult handle minibuffer completion and navigation. Built-in
+;; tab-line gives a VS Code-like editor tab view without introducing another
+;; UI package.
+;;
+;; See docs/CONFIGURATION.md for the full module map.
+
+;;; Code:
 
 ;;; ---------------------------------------------------------------------------
 ;;; Completion stack

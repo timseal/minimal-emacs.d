@@ -1,5 +1,9 @@
 ;;; personal-workflow.el --- Daily editing, navigation, and terminal workflow -*- lexical-binding: t; no-byte-compile: t; -*-
 
+;;; Commentary:
+;;
+;; This module contains the day-to-day editing workflow.
+;;
 ;; Scope:
 ;; - code folding and editing aids
 ;; - source-control and whitespace feedback
@@ -10,6 +14,10 @@
 ;; This is the largest module because it covers the day-to-day coding workflow.
 ;; Keep the individual sections intentionally grouped around activity, not by
 ;; package name alone.
+;;
+;; See docs/CONFIGURATION.md for the full module map.
+
+;;; Code:
 
 ;;; ---------------------------------------------------------------------------
 ;;; Folding and code navigation

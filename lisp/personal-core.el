@@ -1,5 +1,9 @@
 ;;; personal-core.el --- Foundation settings for my minimal-emacs.d fork -*- lexical-binding: t; no-byte-compile: t; -*-
 
+;;; Commentary:
+;;
+;; This module is the foundation layer for the personal Emacs setup.
+;;
 ;; Scope:
 ;; - startup and compile-time behavior
 ;; - default UI and theming
@@ -8,6 +12,10 @@
 ;;
 ;; This module should stay small and stable. It contains the global foundation
 ;; that makes the rest of the personal config predictable and easy to maintain.
+;;
+;; See docs/CONFIGURATION.md for the full module map.
+
+;;; Code:
 
 ;;; ---------------------------------------------------------------------------
 ;;; Startup and package compilation

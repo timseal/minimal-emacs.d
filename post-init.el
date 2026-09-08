@@ -1,9 +1,20 @@
 ;;; post-init.el --- Personal config entry point for my minimal-emacs.d fork -*- no-byte-compile: t; lexical-binding: t; -*-
 
-;; This file intentionally stays small: it contains only the bootstrap that loads
-;; the personal modules for the Emacs workflow. The upstream project files remain
-;; untouched, while the custom logic is organized into separate, easier-to-manage
-;; files under ~/.emacs.d/lisp/.
+;;; Commentary:
+
+;; This file intentionally stays small: it contains only the bootstrap that
+;; loads the personal modules for the Emacs workflow.
+;;
+;; Design:
+;; - keep upstream minimal-emacs.d files untouched
+;; - keep personal modules under ~/.emacs.d/lisp/
+;; - load modules explicitly so startup order is obvious
+;; - keep generated or machine-local files out of git
+;;
+;; See docs/CONFIGURATION.md for the full module map and docs/AI-WORKFLOW.md
+;; for the gptel/Copilot setup.
+
+;;; Code:
 
 (defconst my/personal-config-dir
   (expand-file-name "lisp/" user-emacs-directory)

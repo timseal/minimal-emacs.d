@@ -1,5 +1,10 @@
 ;;; personal-ai.el --- AI-assisted editing and chat workflow -*- lexical-binding: t; no-byte-compile: t; -*-
 
+;;; Commentary:
+;;
+;; This module configures AI-assisted editing while keeping AI behavior isolated
+;; from the regular completion and coding workflow modules.
+;;
 ;; Scope:
 ;; - gptel chat and region commands backed by GitHub CopilotChat
 ;; - Copilot inline ghost-text completions for programming buffers
@@ -11,6 +16,10 @@
 ;; - `C-c a m' opens gptel's transient menu
 ;; - `C-c a l' logs in to gptel's GitHub Copilot backend
 ;; - `C-c a c' requests an inline Copilot completion at point
+;;
+;; See docs/AI-WORKFLOW.md for setup, authentication, and command usage.
+
+;;; Code:
 
 ;;; ---------------------------------------------------------------------------
 ;;; Chat and region prompts
