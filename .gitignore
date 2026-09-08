@@ -2,6 +2,8 @@
 !README.md
 !early-init.el
 !init.el
+!docs/
+!docs/*.md
 !lisp/
 !lisp/*.el
 !.github/
