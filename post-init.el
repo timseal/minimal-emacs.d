@@ -58,10 +58,10 @@
 
 
 ;; Set the default font with specific size and weight
-;;(set-face-attribute 'default nil
-;;                    :height 110 :weight 'medium :family "Iosevka Term")
 (set-face-attribute 'default nil
-                    :height 105 :weight 'medium :family "Aporetic Sans")
+                    :height 130 :weight 'regular :family "FiraCode Nerd Font Mono")
+;;(set-face-attribute 'default nil
+;;                    :height 105 :weight 'medium :family "Aporetic Sans")
 
 ;;(mapc #'disable-theme custom-enabled-themes)  ; Disable all active themes
 ;; (If you prefer dark themes, replace modus-operandi with modus-vivendi.)
@@ -69,13 +69,32 @@
 
 ;; https://github.com/jamescherti/tomorrow-night-deepblue-theme.el
 
-(use-package tomorrow-night-deepblue-theme
-  :init
-  (let ((inhibit-redisplay t))
-    ;; Disable all active themes
-    (mapc #'disable-theme custom-enabled-themes)
-    ;; Load the tomorrow-night-deepblue theme
-    (load-theme 'tomorrow-night-deepblue t)))
+;; (use-package tomorrow-night-deepblue-theme
+;;   :init
+;;   (let ((inhibit-redisplay t))
+;;     ;; Disable all active themes
+;;     (mapc #'disable-theme custom-enabled-themes)
+;;     ;; Load the tomorrow-night-deepblue theme
+;;     (load-theme 'tomorrow-night-deepblue t)))
+
+;; (use-package organic-green-theme
+;;   :init
+;;   (let ((inhibit-redisplay t))
+;;     ;; Disable all active themes
+;;     (mapc #'disable-theme custom-enabled-themes)
+;;     ;; Load the tomorrow-night-deepblue theme
+;;     (load-theme 'organic-green-theme t)))
+
+;; (use-package kaolin-themes
+;;   :config
+;;   (load-theme 'kaolin-light t)
+;;   (kaolin-treemacs-theme))
+
+(use-package leuven-theme
+  :config
+  (load-theme 'leuven t))
+
+
 
 ;; END OF THEMING
 ;;-----------------------------------
@@ -243,7 +262,7 @@
   ;; available in the *Completions* buffer, add it to the
   ;; `completion-list-mode-map'.
   :bind (:map minibuffer-local-map
-         ("M-A" . marginalia-cycle))
+              ("M-A" . marginalia-cycle))
 
   ;; The :init section is always executed.
   :init
@@ -953,10 +972,10 @@
     ;; Suppress prompts for terminating active processes when closing vterm
     (setq-local confirm-kill-processes nil))
 
- ;; try changing font
- ;; this did not work
- ;; ( (set (make-local-variable 'buffer-face-mode-face) '(:family "IosevkaTerm Nerd Font"))
- ;;  (buffer-face-mode t))
+  ;; try changing font
+  ;; this did not work
+  ;; ( (set (make-local-variable 'buffer-face-mode-face) '(:family "IosevkaTerm Nerd Font"))
+  ;;  (buffer-face-mode t))
 
   :init
   (add-hook 'vterm-mode-hook #'my-vterm--setup)
