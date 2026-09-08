@@ -11,9 +11,6 @@
 ;; Keep the individual sections intentionally grouped around activity, not by
 ;; package name alone.
 
-(eval-when-compile
-  (require 'use-package))
-
 ;;; ---------------------------------------------------------------------------
 ;;; Folding and code navigation
 ;;; ---------------------------------------------------------------------------

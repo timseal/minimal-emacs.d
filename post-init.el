@@ -5,9 +5,6 @@
 ;; untouched, while the custom logic is organized into separate, easier-to-manage
 ;; files under ~/.emacs.d/lisp/.
 
-(eval-when-compile
-  (require 'use-package))
-
 (defconst my/personal-config-dir
   (expand-file-name "lisp/" user-emacs-directory)
   "Directory containing the personal Emacs Lisp modules.")

@@ -9,9 +9,6 @@
 ;; This module is intentionally focused on the interactive, "discoverability"
 ;; layer of Emacs. Keep it opinionated and compact.
 
-(eval-when-compile
-  (require 'use-package))
-
 ;;; ---------------------------------------------------------------------------
 ;;; Completion stack
 ;;; ---------------------------------------------------------------------------

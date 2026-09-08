@@ -9,9 +9,6 @@
 ;; This module should stay small and stable. It contains the global foundation
 ;; that makes the rest of the personal config predictable and easy to maintain.
 
-(eval-when-compile
-  (require 'use-package))
-
 ;;; ---------------------------------------------------------------------------
 ;;; Startup and package compilation
 ;;; ---------------------------------------------------------------------------
