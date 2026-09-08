@@ -16,6 +16,7 @@
 (my/load-personal-module "personal-core.el")
 (my/load-personal-module "personal-completion.el")
 (my/load-personal-module "personal-workflow.el")
+(my/load-personal-module "personal-ai.el")
 
 (provide 'post-init)
 ;;; post-init.el ends here
