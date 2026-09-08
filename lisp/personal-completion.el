@@ -17,11 +17,27 @@
 ;;; ---------------------------------------------------------------------------
 
 (use-package corfu
+  :bind (:map corfu-map
+              ("TAB" . corfu-next)
+              ([tab] . corfu-next)
+              ("S-TAB" . corfu-previous)
+              ([backtab] . corfu-previous)
+              ("RET" . corfu-insert))
   :init
   (setq text-mode-ispell-word-completion nil
         read-extended-command-predicate #'command-completion-default-include-p
-        tab-always-indent 'complete)
-  (global-corfu-mode 1))
+        tab-always-indent 'complete
+        corfu-auto t
+        corfu-auto-delay 0.2
+        corfu-auto-prefix 2
+        corfu-cycle t
+        corfu-on-exact-match nil
+        corfu-preselect 'prompt
+        corfu-quit-no-match 'separator
+        corfu-popupinfo-delay '(0.5 . 0.2))
+  (global-corfu-mode 1)
+  :config
+  (corfu-popupinfo-mode 1))
 
 (use-package cape
   :commands (cape-dabbrev cape-file cape-elisp-block)
@@ -145,6 +161,15 @@
 (use-package vim-tab-bar
   :init
   (vim-tab-bar-mode 1))
+
+(use-package tab-line
+  :ensure nil
+  :init
+  (setq tab-line-close-button-show t
+        tab-line-new-button-show nil
+        tab-line-separator " "
+        tab-line-switch-cycling t)
+  (global-tab-line-mode 1))
 
 (use-package easysession
   :demand t
